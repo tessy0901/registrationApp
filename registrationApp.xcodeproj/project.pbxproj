@@ -15,6 +15,8 @@
 		231E152721529C6F006CE3EE /* registrationAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231E152621529C6F006CE3EE /* registrationAppTests.swift */; };
 		231E153221529C6F006CE3EE /* registrationAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231E153121529C6F006CE3EE /* registrationAppUITests.swift */; };
 		231E154021529D7E006CE3EE /* GroupRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231E153F21529D7E006CE3EE /* GroupRegistrationViewController.swift */; };
+		23B99630216DDFF200C4FB61 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B9962F216DDFF200C4FB61 /* ProductViewController.swift */; };
+		23B99632216DE00D00C4FB61 /* AddProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B99631216DE00D00C4FB61 /* AddProductViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		231E153121529C6F006CE3EE /* registrationAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registrationAppUITests.swift; sourceTree = "<group>"; };
 		231E153321529C6F006CE3EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		231E153F21529D7E006CE3EE /* GroupRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupRegistrationViewController.swift; sourceTree = "<group>"; };
+		23B9962F216DDFF200C4FB61 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
+		23B99631216DE00D00C4FB61 /* AddProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,8 @@
 			isa = PBXGroup;
 			children = (
 				231E151521529C6C006CE3EE /* Main.storyboard */,
+				23B9962F216DDFF200C4FB61 /* ProductViewController.swift */,
+				23B99631216DE00D00C4FB61 /* AddProductViewController.swift */,
 				231E151321529C6C006CE3EE /* ViewController.swift */,
 				231E153F21529D7E006CE3EE /* GroupRegistrationViewController.swift */,
 				231E151121529C6C006CE3EE /* AppDelegate.swift */,
@@ -261,6 +267,8 @@
 			files = (
 				231E151421529C6C006CE3EE /* ViewController.swift in Sources */,
 				231E151221529C6C006CE3EE /* AppDelegate.swift in Sources */,
+				23B99632216DE00D00C4FB61 /* AddProductViewController.swift in Sources */,
+				23B99630216DDFF200C4FB61 /* ProductViewController.swift in Sources */,
 				231E154021529D7E006CE3EE /* GroupRegistrationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
