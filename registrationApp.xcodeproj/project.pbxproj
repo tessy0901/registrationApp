@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		231E151C21529C6F006CE3EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 231E151A21529C6F006CE3EE /* LaunchScreen.storyboard */; };
 		231E152721529C6F006CE3EE /* registrationAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231E152621529C6F006CE3EE /* registrationAppTests.swift */; };
 		231E153221529C6F006CE3EE /* registrationAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231E153121529C6F006CE3EE /* registrationAppUITests.swift */; };
+		231E154021529D7E006CE3EE /* GroupRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231E153F21529D7E006CE3EE /* GroupRegistrationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		231E152D21529C6F006CE3EE /* registrationAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = registrationAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		231E153121529C6F006CE3EE /* registrationAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registrationAppUITests.swift; sourceTree = "<group>"; };
 		231E153321529C6F006CE3EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		231E153F21529D7E006CE3EE /* GroupRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupRegistrationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +99,10 @@
 		231E151021529C6C006CE3EE /* registrationApp */ = {
 			isa = PBXGroup;
 			children = (
-				231E151121529C6C006CE3EE /* AppDelegate.swift */,
-				231E151321529C6C006CE3EE /* ViewController.swift */,
 				231E151521529C6C006CE3EE /* Main.storyboard */,
+				231E151321529C6C006CE3EE /* ViewController.swift */,
+				231E153F21529D7E006CE3EE /* GroupRegistrationViewController.swift */,
+				231E151121529C6C006CE3EE /* AppDelegate.swift */,
 				231E151821529C6F006CE3EE /* Assets.xcassets */,
 				231E151A21529C6F006CE3EE /* LaunchScreen.storyboard */,
 				231E151D21529C6F006CE3EE /* Info.plist */,
@@ -205,7 +208,7 @@
 				};
 			};
 			buildConfigurationList = 231E150921529C6C006CE3EE /* Build configuration list for PBXProject "registrationApp" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -258,6 +261,7 @@
 			files = (
 				231E151421529C6C006CE3EE /* ViewController.swift in Sources */,
 				231E151221529C6C006CE3EE /* AppDelegate.swift in Sources */,
+				231E154021529D7E006CE3EE /* GroupRegistrationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
