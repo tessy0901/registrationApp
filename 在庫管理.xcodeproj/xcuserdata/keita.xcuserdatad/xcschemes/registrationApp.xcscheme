@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "231E150D21529C6C006CE3EE"
-               BuildableName = "registrationApp.app"
-               BlueprintName = "registrationApp"
-               ReferencedContainer = "container:registrationApp.xcodeproj">
+               BuildableName = "&#x5728;&#x5eab;&#x7ba1;&#x7406;.app"
+               BlueprintName = "&#x5728;&#x5eab;&#x7ba1;&#x7406;"
+               ReferencedContainer = "container:&#x5728;&#x5eab;&#x7ba1;&#x7406;.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "231E152121529C6F006CE3EE"
-               BuildableName = "registrationAppTests.xctest"
-               BlueprintName = "registrationAppTests"
-               ReferencedContainer = "container:registrationApp.xcodeproj">
+               BuildableName = "&#x5728;&#x5eab;&#x7ba1;&#x7406;Tests.xctest"
+               BlueprintName = "&#x5728;&#x5eab;&#x7ba1;&#x7406;Tests"
+               ReferencedContainer = "container:&#x5728;&#x5eab;&#x7ba1;&#x7406;.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "231E152C21529C6F006CE3EE"
-               BuildableName = "registrationAppUITests.xctest"
-               BlueprintName = "registrationAppUITests"
-               ReferencedContainer = "container:registrationApp.xcodeproj">
+               BuildableName = "&#x5728;&#x5eab;&#x7ba1;&#x7406;UITests.xctest"
+               BlueprintName = "&#x5728;&#x5eab;&#x7ba1;&#x7406;UITests"
+               ReferencedContainer = "container:&#x5728;&#x5eab;&#x7ba1;&#x7406;.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "231E150D21529C6C006CE3EE"
-            BuildableName = "registrationApp.app"
-            BlueprintName = "registrationApp"
-            ReferencedContainer = "container:registrationApp.xcodeproj">
+            BuildableName = "&#x5728;&#x5eab;&#x7ba1;&#x7406;.app"
+            BlueprintName = "&#x5728;&#x5eab;&#x7ba1;&#x7406;"
+            ReferencedContainer = "container:&#x5728;&#x5eab;&#x7ba1;&#x7406;.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "231E150D21529C6C006CE3EE"
-            BuildableName = "registrationApp.app"
-            BlueprintName = "registrationApp"
-            ReferencedContainer = "container:registrationApp.xcodeproj">
+            BuildableName = "&#x5728;&#x5eab;&#x7ba1;&#x7406;.app"
+            BlueprintName = "&#x5728;&#x5eab;&#x7ba1;&#x7406;"
+            ReferencedContainer = "container:&#x5728;&#x5eab;&#x7ba1;&#x7406;.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "231E150D21529C6C006CE3EE"
-            BuildableName = "registrationApp.app"
-            BlueprintName = "registrationApp"
-            ReferencedContainer = "container:registrationApp.xcodeproj">
+            BuildableName = "&#x5728;&#x5eab;&#x7ba1;&#x7406;.app"
+            BlueprintName = "&#x5728;&#x5eab;&#x7ba1;&#x7406;"
+            ReferencedContainer = "container:&#x5728;&#x5eab;&#x7ba1;&#x7406;.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

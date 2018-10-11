@@ -37,22 +37,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		231E150E21529C6C006CE3EE /* registrationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = registrationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		231E150E21529C6C006CE3EE /* 在庫管理.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "在庫管理.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		231E151121529C6C006CE3EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		231E151321529C6C006CE3EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		231E151621529C6C006CE3EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		231E151821529C6F006CE3EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		231E151B21529C6F006CE3EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		231E151D21529C6F006CE3EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		231E152221529C6F006CE3EE /* registrationAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = registrationAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		231E152221529C6F006CE3EE /* 在庫管理Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "在庫管理Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		231E152621529C6F006CE3EE /* registrationAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registrationAppTests.swift; sourceTree = "<group>"; };
 		231E152821529C6F006CE3EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		231E152D21529C6F006CE3EE /* registrationAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = registrationAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		231E152D21529C6F006CE3EE /* 在庫管理UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "在庫管理UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		231E153121529C6F006CE3EE /* registrationAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registrationAppUITests.swift; sourceTree = "<group>"; };
 		231E153321529C6F006CE3EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		231E153F21529D7E006CE3EE /* GroupRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupRegistrationViewController.swift; sourceTree = "<group>"; };
 		23B9962F216DDFF200C4FB61 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		23B99631216DE00D00C4FB61 /* AddProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductViewController.swift; sourceTree = "<group>"; };
+		23B99633216F2B5B00C4FB61 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		23B99634216F2B5B00C4FB61 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,9 +95,9 @@
 		231E150F21529C6C006CE3EE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				231E150E21529C6C006CE3EE /* registrationApp.app */,
-				231E152221529C6F006CE3EE /* registrationAppTests.xctest */,
-				231E152D21529C6F006CE3EE /* registrationAppUITests.xctest */,
+				231E150E21529C6C006CE3EE /* 在庫管理.app */,
+				231E152221529C6F006CE3EE /* 在庫管理Tests.xctest */,
+				231E152D21529C6F006CE3EE /* 在庫管理UITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -137,9 +139,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		231E150D21529C6C006CE3EE /* registrationApp */ = {
+		231E150D21529C6C006CE3EE /* 在庫管理 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 231E153621529C6F006CE3EE /* Build configuration list for PBXNativeTarget "registrationApp" */;
+			buildConfigurationList = 231E153621529C6F006CE3EE /* Build configuration list for PBXNativeTarget "在庫管理" */;
 			buildPhases = (
 				231E150A21529C6C006CE3EE /* Sources */,
 				231E150B21529C6C006CE3EE /* Frameworks */,
@@ -149,14 +151,14 @@
 			);
 			dependencies = (
 			);
-			name = registrationApp;
+			name = "在庫管理";
 			productName = registrationApp;
-			productReference = 231E150E21529C6C006CE3EE /* registrationApp.app */;
+			productReference = 231E150E21529C6C006CE3EE /* 在庫管理.app */;
 			productType = "com.apple.product-type.application";
 		};
-		231E152121529C6F006CE3EE /* registrationAppTests */ = {
+		231E152121529C6F006CE3EE /* 在庫管理Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 231E153921529C6F006CE3EE /* Build configuration list for PBXNativeTarget "registrationAppTests" */;
+			buildConfigurationList = 231E153921529C6F006CE3EE /* Build configuration list for PBXNativeTarget "在庫管理Tests" */;
 			buildPhases = (
 				231E151E21529C6F006CE3EE /* Sources */,
 				231E151F21529C6F006CE3EE /* Frameworks */,
@@ -167,14 +169,14 @@
 			dependencies = (
 				231E152421529C6F006CE3EE /* PBXTargetDependency */,
 			);
-			name = registrationAppTests;
+			name = "在庫管理Tests";
 			productName = registrationAppTests;
-			productReference = 231E152221529C6F006CE3EE /* registrationAppTests.xctest */;
+			productReference = 231E152221529C6F006CE3EE /* 在庫管理Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		231E152C21529C6F006CE3EE /* registrationAppUITests */ = {
+		231E152C21529C6F006CE3EE /* 在庫管理UITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 231E153C21529C6F006CE3EE /* Build configuration list for PBXNativeTarget "registrationAppUITests" */;
+			buildConfigurationList = 231E153C21529C6F006CE3EE /* Build configuration list for PBXNativeTarget "在庫管理UITests" */;
 			buildPhases = (
 				231E152921529C6F006CE3EE /* Sources */,
 				231E152A21529C6F006CE3EE /* Frameworks */,
@@ -185,9 +187,9 @@
 			dependencies = (
 				231E152F21529C6F006CE3EE /* PBXTargetDependency */,
 			);
-			name = registrationAppUITests;
+			name = "在庫管理UITests";
 			productName = registrationAppUITests;
-			productReference = 231E152D21529C6F006CE3EE /* registrationAppUITests.xctest */;
+			productReference = 231E152D21529C6F006CE3EE /* 在庫管理UITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -213,7 +215,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 231E150921529C6C006CE3EE /* Build configuration list for PBXProject "registrationApp" */;
+			buildConfigurationList = 231E150921529C6C006CE3EE /* Build configuration list for PBXProject "在庫管理" */;
 			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -226,9 +228,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				231E150D21529C6C006CE3EE /* registrationApp */,
-				231E152121529C6F006CE3EE /* registrationAppTests */,
-				231E152C21529C6F006CE3EE /* registrationAppUITests */,
+				231E150D21529C6C006CE3EE /* 在庫管理 */,
+				231E152121529C6F006CE3EE /* 在庫管理Tests */,
+				231E152C21529C6F006CE3EE /* 在庫管理UITests */,
 			);
 		};
 /* End PBXProject section */
@@ -294,12 +296,12 @@
 /* Begin PBXTargetDependency section */
 		231E152421529C6F006CE3EE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 231E150D21529C6C006CE3EE /* registrationApp */;
+			target = 231E150D21529C6C006CE3EE /* 在庫管理 */;
 			targetProxy = 231E152321529C6F006CE3EE /* PBXContainerItemProxy */;
 		};
 		231E152F21529C6F006CE3EE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 231E150D21529C6C006CE3EE /* registrationApp */;
+			target = 231E150D21529C6C006CE3EE /* 在庫管理 */;
 			targetProxy = 231E152E21529C6F006CE3EE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -309,6 +311,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				231E151621529C6C006CE3EE /* Base */,
+				23B99633216F2B5B00C4FB61 /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				231E151B21529C6F006CE3EE /* Base */,
+				23B99634216F2B5B00C4FB61 /* ja */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -328,6 +332,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -389,6 +394,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -447,6 +453,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JR67H3T72G;
 				INFOPLIST_FILE = registrationApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -465,6 +472,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JR67H3T72G;
 				INFOPLIST_FILE = registrationApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -493,7 +501,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/registrationApp.app/registrationApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/在庫管理.app/在庫管理";
 			};
 			name = Debug;
 		};
@@ -514,7 +522,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/registrationApp.app/registrationApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/在庫管理.app/在庫管理";
 			};
 			name = Release;
 		};
@@ -561,7 +569,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		231E150921529C6C006CE3EE /* Build configuration list for PBXProject "registrationApp" */ = {
+		231E150921529C6C006CE3EE /* Build configuration list for PBXProject "在庫管理" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				231E153421529C6F006CE3EE /* Debug */,
@@ -570,7 +578,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		231E153621529C6F006CE3EE /* Build configuration list for PBXNativeTarget "registrationApp" */ = {
+		231E153621529C6F006CE3EE /* Build configuration list for PBXNativeTarget "在庫管理" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				231E153721529C6F006CE3EE /* Debug */,
@@ -579,7 +587,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		231E153921529C6F006CE3EE /* Build configuration list for PBXNativeTarget "registrationAppTests" */ = {
+		231E153921529C6F006CE3EE /* Build configuration list for PBXNativeTarget "在庫管理Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				231E153A21529C6F006CE3EE /* Debug */,
@@ -588,7 +596,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		231E153C21529C6F006CE3EE /* Build configuration list for PBXNativeTarget "registrationAppUITests" */ = {
+		231E153C21529C6F006CE3EE /* Build configuration list for PBXNativeTarget "在庫管理UITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				231E153D21529C6F006CE3EE /* Debug */,

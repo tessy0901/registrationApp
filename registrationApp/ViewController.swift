@@ -51,6 +51,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         
         // セルに表示する値を設定する
         GroupCell.textLabel!.text = GroupTitle[indexPath.row]
+        GroupCell.accessoryType = UITableViewCell.AccessoryType.detailButton
         
         // データを設定したセルを返却する
         return GroupCell
