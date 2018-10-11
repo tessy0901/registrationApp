@@ -37,10 +37,6 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         self.navigationController?.isNavigationBarHidden = false
         navigationItem.leftBarButtonItem = editButtonItem
         GroupTable.reloadData()
-        
-        for str in self.GroupTitle {
-            print(str as Any)
-        }
     }
     
     // Table Viewにいくつのセルを表示するかを指定する
