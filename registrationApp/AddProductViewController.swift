@@ -22,7 +22,10 @@ class AddProductViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func endInput(_ sender: Any) {
+        productName?.text = (sender as AnyObject).text
+    }
+    
     /*
     // MARK: - Navigation
 

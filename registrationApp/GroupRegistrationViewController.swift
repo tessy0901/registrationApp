@@ -21,4 +21,7 @@ class GroupRegistrationViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    @IBAction func endInput(_ sender: Any) {
+        nameTextField?.text = (sender as AnyObject).text
+    }
 }

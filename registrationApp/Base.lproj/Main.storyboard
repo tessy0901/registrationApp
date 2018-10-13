@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="TopView" id="BYZ-38-t0r" customClass="ViewController" customModule="registrationApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TopView" id="BYZ-38-t0r" customClass="ViewController" customModule="在庫管理" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -62,14 +62,14 @@
         <!--Product View Controller-->
         <scene sceneID="bUT-8M-jBz">
             <objects>
-                <viewController id="iSJ-x2-qX5" customClass="ProductViewController" customModule="registrationApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="iSJ-x2-qX5" customClass="ProductViewController" customModule="在庫管理" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RI1-Ec-3ZQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="ProductTable" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yeb-GZ-pxv" userLabel="ProductTable">
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ProductCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProductCell" id="aPr-I5-IAP" userLabel="ProductCell">
@@ -106,10 +106,10 @@
             </objects>
             <point key="canvasLocation" x="1282.5" y="821.83098591549299"/>
         </scene>
-        <!--Add Product View Controller-->
+        <!--Title-->
         <scene sceneID="CCO-Gh-wp0">
             <objects>
-                <viewController id="FsU-RQ-NGS" customClass="AddProductViewController" customModule="registrationApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="FsU-RQ-NGS" customClass="AddProductViewController" customModule="在庫管理" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0uF-yV-FAF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -120,19 +120,21 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFq-8e-H9D" userLabel="AddButton">
-                                <rect key="frame" x="137" y="431" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="sMu-Zr-K3C" kind="unwind" unwindAction="GoToProductViewController:" id="NI1-jZ-6tO"/>
+                                    <action selector="endInput:" destination="FsU-RQ-NGS" eventType="editingDidEndOnExit" id="vEj-qQ-3th"/>
                                 </connections>
-                            </button>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="gEA-8h-GwD"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="49i-Rm-viB">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="b9h-Ds-BE4">
+                            <connections>
+                                <segue destination="sMu-Zr-K3C" kind="unwind" unwindAction="GoToProductViewController:" id="olJ-zP-teG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="productName" destination="lh4-Yx-Rmz" id="vLp-yx-kko"/>
                     </connections>
@@ -145,7 +147,7 @@
         <!--Group Registration View Controller-->
         <scene sceneID="uN4-mP-rkM">
             <objects>
-                <viewController storyboardIdentifier="AddGroup" id="1pV-kP-dE0" userLabel="Group Registration View Controller" customClass="GroupRegistrationViewController" customModule="registrationApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddGroup" id="1pV-kP-dE0" userLabel="Group Registration View Controller" customClass="GroupRegistrationViewController" customModule="在庫管理" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sJV-yj-oOW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -156,23 +158,21 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BGN-qM-4yy" userLabel="AddButton">
-                                <rect key="frame" x="137" y="269" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="uK4-sT-213" kind="unwind" unwindAction="GoToViewController:" id="NQw-hM-241"/>
+                                    <action selector="endInput:" destination="1pV-kP-dE0" eventType="editingDidEndOnExit" id="Egl-SJ-amZ"/>
                                 </connections>
-                            </button>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="BGN-qM-4yy" firstAttribute="centerY" secondItem="sJV-yj-oOW" secondAttribute="centerY" id="dQ8-iK-OUi"/>
-                            <constraint firstItem="BGN-qM-4yy" firstAttribute="centerX" secondItem="sJV-yj-oOW" secondAttribute="centerX" id="ddg-G5-Y2A"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="9zV-Tp-NGJ"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="deu-4F-j4V"/>
+                    <navigationItem key="navigationItem" title="Title" id="deu-4F-j4V">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="8Wv-Vs-aTY">
+                            <connections>
+                                <segue destination="uK4-sT-213" kind="unwind" unwindAction="GoToViewController:" id="zJx-yG-U1f"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="nameTextField" destination="gLz-vd-Syx" id="Vu2-MD-xqU"/>
                     </connections>
