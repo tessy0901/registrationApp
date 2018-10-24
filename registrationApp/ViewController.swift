@@ -11,6 +11,8 @@ import UIKit
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     var GroupTitle:[String] = []
+    var groupDefaults = UserDefaults.standard
+
     
     @IBOutlet weak var GroupTable: UITableView!
     @IBOutlet weak var addButton: UIBarButtonItem!
@@ -22,6 +24,8 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         }
         if let text = source.nameTextField!.text {
             GroupTitle.append(text)
+            updateDefaults()
+            
             GroupTable.reloadData()
         }
 
@@ -32,10 +36,19 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         // Do any additional setup after loading the view, typically from a nib.
         GroupTable.delegate = self
         GroupTable.dataSource = self
-    
+        
         //セルの編集buttonの追加
         self.navigationController?.isNavigationBarHidden = false
         navigationItem.leftBarButtonItem = editButtonItem
+        GroupTable.reloadData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if UserDefaults.standard.object(forKey: "groupData") != nil{
+            GroupTitle = UserDefaults.standard.object(forKey: "groupData") as! [String]
+        }
         GroupTable.reloadData()
     }
     
@@ -74,14 +87,22 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         return true
     }
     
-    //編集ボタンが押下された時の処理
+    //削除ボタンが押下された時の処理
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
         //dataを消してから
         GroupTitle.remove(at: indexPath.row)
+        updateDefaults()
+        
         //tableViewCellの削除
         tableView.deleteRows(at: [indexPath], with: .automatic)
         GroupTable.reloadData()
+    }
+    
+    //userDefaultsの更新
+    func updateDefaults(){
+        groupDefaults.set(GroupTitle, forKey: "groupData")
+        groupDefaults.synchronize()
     }
     
     override func didReceiveMemoryWarning() {
