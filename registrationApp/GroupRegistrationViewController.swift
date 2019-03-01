@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import Firebase
 
 class GroupRegistrationViewController: UIViewController {
+    let db = Firestore.firestore()
     
     @IBOutlet weak var nameTextField: UITextField?
     

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1tP-71-7NM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1tP-71-7NM">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="TopView" id="BYZ-38-t0r" customClass="ViewController" customModule="在庫管理" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TopView" id="BYZ-38-t0r" customClass="ViewController" customModule="registrationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,15 +23,12 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" restorationIdentifier="GroupCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Groupcell" id="Qgy-id-CBi" userLabel="GroupCell">
-                                        <rect key="frame" x="0.0" y="28" width="106.5" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qgy-id-CBi" id="xSN-7s-Kmc">
-                                            <rect key="frame" x="0.0" y="0.0" width="106.5" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="iSJ-x2-qX5" kind="show" id="S48-Hg-gIg"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -46,13 +43,14 @@
                     <navigationItem key="navigationItem" id="GJ8-PS-ZcV">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="9nC-Th-k1F">
                             <connections>
-                                <segue destination="1pV-kP-dE0" kind="show" id="XVp-1L-av6"/>
+                                <segue destination="1pV-kP-dE0" kind="show" identifier="GoToAddGroup" id="XVp-1L-av6"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="GroupTable" destination="qwd-vk-du3" id="OpA-mI-XI4"/>
                         <outlet property="addButton" destination="9nC-Th-k1F" id="d1k-nZ-QNn"/>
+                        <segue destination="iSJ-x2-qX5" kind="show" identifier="GoToProductTable" id="fGa-Nd-2oy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -62,21 +60,21 @@
         <!--Product View Controller-->
         <scene sceneID="bUT-8M-jBz">
             <objects>
-                <viewController id="iSJ-x2-qX5" customClass="ProductViewController" customModule="在庫管理" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProductViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iSJ-x2-qX5" customClass="ProductViewController" customModule="registrationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RI1-Ec-3ZQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="ProductTable" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yeb-GZ-pxv" userLabel="ProductTable">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="ProductTable" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="88" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yeb-GZ-pxv" userLabel="ProductTable">
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ProductCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProductCell" id="aPr-I5-IAP" userLabel="ProductCell">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="320" height="88"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aPr-I5-IAP" id="mWz-OI-ryW">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="87.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -86,37 +84,47 @@
                                     <outlet property="delegate" destination="iSJ-x2-qX5" id="GVC-BL-Wlz"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="headTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pvl-J2-RBf">
+                                <rect key="frame" x="241" y="490" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" red="0.53289802942856379" green="0.69909293650240845" blue="0.96080166101455688" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
+                                <state key="normal" title="+"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addButton:" destination="iSJ-x2-qX5" eventType="touchUpInside" id="Xyz-PM-lB9"/>
+                                    <segue destination="FsU-RQ-NGS" kind="show" id="kaf-Ua-LyL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="e0V-xY-n9r"/>
                     </view>
-                    <navigationItem key="navigationItem" id="h5S-Cw-4ES">
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="Osj-fm-XZC">
-                            <connections>
-                                <segue destination="FsU-RQ-NGS" kind="show" id="VRW-Wc-rpP"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="h5S-Cw-4ES"/>
                     <connections>
-                        <outlet property="addButton" destination="Osj-fm-XZC" id="Ixh-BF-Ahs"/>
                         <outlet property="productTable" destination="yeb-GZ-pxv" id="Iff-gh-chP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ksi-TT-dld" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1282.5" y="821.83098591549299"/>
+            <point key="canvasLocation" x="1133" y="954"/>
         </scene>
-        <!--Title-->
+        <!--ProductAdd-->
         <scene sceneID="CCO-Gh-wp0">
             <objects>
-                <viewController id="FsU-RQ-NGS" customClass="AddProductViewController" customModule="在庫管理" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="FsU-RQ-NGS" customClass="AddProductViewController" customModule="registrationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0uF-yV-FAF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lh4-Yx-Rmz" userLabel="nameTextField">
                                 <rect key="frame" x="112" y="212" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -124,11 +132,32 @@
                                     <action selector="endInput:" destination="FsU-RQ-NGS" eventType="editingDidEndOnExit" id="vEj-qQ-3th"/>
                                 </connections>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="商品名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfk-Sa-aAQ">
+                                <rect key="frame" x="62" y="217" width="52" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="個数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tze-QS-3cD">
+                                <rect key="frame" x="79" y="255" width="35" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WmY-xH-HKx">
+                                <rect key="frame" x="112" y="250" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="gEA-8h-GwD"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="49i-Rm-viB">
+                    <navigationItem key="navigationItem" title="ProductAdd" id="49i-Rm-viB">
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="b9h-Ds-BE4">
                             <connections>
                                 <segue destination="sMu-Zr-K3C" kind="unwind" unwindAction="GoToProductViewController:" id="olJ-zP-teG"/>
@@ -136,24 +165,25 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="productName" destination="lh4-Yx-Rmz" id="vLp-yx-kko"/>
+                        <outlet property="productName" destination="lh4-Yx-Rmz" id="ufL-4i-e9e"/>
+                        <outlet property="productNumber" destination="WmY-xH-HKx" id="ymd-g0-7EV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4m6-eq-OjD" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="sMu-Zr-K3C" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2044" y="822"/>
+            <point key="canvasLocation" x="2012" y="954"/>
         </scene>
         <!--Group Registration View Controller-->
         <scene sceneID="uN4-mP-rkM">
             <objects>
-                <viewController storyboardIdentifier="AddGroup" id="1pV-kP-dE0" userLabel="Group Registration View Controller" customClass="GroupRegistrationViewController" customModule="在庫管理" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddGroup" id="1pV-kP-dE0" userLabel="Group Registration View Controller" customClass="GroupRegistrationViewController" customModule="registrationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sJV-yj-oOW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gLz-vd-Syx" userLabel="nameTextField">
-                                <rect key="frame" x="112" y="109" width="97" height="30"/>
+                                <rect key="frame" x="163" y="107" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -162,11 +192,18 @@
                                     <action selector="endInput:" destination="1pV-kP-dE0" eventType="editingDidEndOnExit" id="Egl-SJ-amZ"/>
                                 </connections>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="グループ名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ctG-hx-Pxh">
+                                <rect key="frame" x="82" y="116" width="87" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="9zV-Tp-NGJ"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="deu-4F-j4V">
+                    <navigationItem key="navigationItem" title="GroupAdd" id="deu-4F-j4V">
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="8Wv-Vs-aTY">
                             <connections>
                                 <segue destination="uK4-sT-213" kind="unwind" unwindAction="GoToViewController:" id="zJx-yG-U1f"/>

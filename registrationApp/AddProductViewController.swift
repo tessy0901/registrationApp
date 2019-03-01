@@ -9,11 +9,13 @@
 import UIKit
 
 class AddProductViewController: UIViewController {
-
+    
     @IBOutlet weak var productName: UITextField!
+    @IBOutlet weak var productNumber: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.productNumber.keyboardType = UIKeyboardType.numberPad
         // Do any additional setup after loading the view.
     }
     
