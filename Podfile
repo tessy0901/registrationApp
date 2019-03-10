@@ -8,7 +8,6 @@ target 'registrationApp' do
   pod 'FirebaseUI'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
-  pod 'RealmSwift'
 
   # Pods for registrationApp
 

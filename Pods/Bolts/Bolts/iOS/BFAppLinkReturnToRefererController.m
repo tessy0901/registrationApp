@@ -186,11 +186,11 @@ static const CFTimeInterval kBFViewAnimationDuration = 0.25f;
 
 - (void)closeViewAnimated:(BOOL)animated explicitlyClosed:(BOOL)explicitlyClosed {
     void (^closer)(void) = ^{
-        if (_navigationController) {
-            [self updateNavigationBarY:_view.statusBarHeight];
+        if (self->_navigationController) {
+            [self updateNavigationBarY:self->_view.statusBarHeight];
         }
 
-        CGRect frame = _view.frame;
+        CGRect frame = self->_view.frame;
         frame.size.height = 0.0;
         _view.frame = frame;
     };

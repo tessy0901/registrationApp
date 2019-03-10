@@ -16,9 +16,10 @@
 
 #import <Foundation/Foundation.h>
 
-#include "Firestore/core/src/firebase/firestore/model/document_key_set.h"
+#include <vector>
 
-using firebase::firestore::model::DocumentKeySet;
+#include "Firestore/core/src/firebase/firestore/core/view_snapshot.h"
+#include "Firestore/core/src/firebase/firestore/model/document_key_set.h"
 
 @class FSTDocument;
 @class FSTQuery;
@@ -26,58 +27,6 @@ using firebase::firestore::model::DocumentKeySet;
 @class FSTViewSnapshot;
 
 NS_ASSUME_NONNULL_BEGIN
-
-#pragma mark - FSTDocumentViewChange
-
-/**
- * The types of changes that can happen to a document with respect to a view.
- * NOTE: We sort document changes by their type, so the ordering of this enum is significant.
- */
-typedef NS_ENUM(NSInteger, FSTDocumentViewChangeType) {
-  FSTDocumentViewChangeTypeRemoved = 0,
-  FSTDocumentViewChangeTypeAdded,
-  FSTDocumentViewChangeTypeModified,
-  FSTDocumentViewChangeTypeMetadata,
-};
-
-/** A change to a single document's state within a view. */
-@interface FSTDocumentViewChange : NSObject
-
-- (id)init __attribute__((unavailable("Use a static constructor method.")));
-
-+ (instancetype)changeWithDocument:(FSTDocument *)document type:(FSTDocumentViewChangeType)type;
-
-/** The type of change for the document. */
-@property(nonatomic, assign, readonly) FSTDocumentViewChangeType type;
-/** The document whose status changed. */
-@property(nonatomic, strong, readonly) FSTDocument *document;
-
-@end
-
-#pragma mark - FSTDocumentChangeSet
-
-/** The possibly states a document can be in w.r.t syncing from local storage to the backend. */
-typedef NS_ENUM(NSInteger, FSTSyncState) {
-  FSTSyncStateNone = 0,
-  FSTSyncStateLocal,
-  FSTSyncStateSynced,
-};
-
-/** A set of changes to documents with respect to a view. This set is mutable. */
-@interface FSTDocumentViewChangeSet : NSObject
-
-/** Returns a new empty change set. */
-+ (instancetype)changeSet;
-
-/** Takes a new change and applies it to the set. */
-- (void)addChange:(FSTDocumentViewChange *)change;
-
-/** Returns the set of all changes tracked in this set. */
-- (NSArray<FSTDocumentViewChange *> *)changes;
-
-@end
-
-#pragma mark - FSTViewSnapshot
 
 typedef void (^FSTViewSnapshotHandler)(FSTViewSnapshot *_Nullable snapshot,
                                        NSError *_Nullable error);
@@ -88,9 +37,10 @@ typedef void (^FSTViewSnapshotHandler)(FSTViewSnapshot *_Nullable snapshot,
 - (instancetype)initWithQuery:(FSTQuery *)query
                     documents:(FSTDocumentSet *)documents
                  oldDocuments:(FSTDocumentSet *)oldDocuments
-              documentChanges:(NSArray<FSTDocumentViewChange *> *)documentChanges
+              documentChanges:
+                  (std::vector<firebase::firestore::core::DocumentViewChange>)documentChanges
                     fromCache:(BOOL)fromCache
-                  mutatedKeys:(DocumentKeySet)mutatedKeys
+                  mutatedKeys:(firebase::firestore::model::DocumentKeySet)mutatedKeys
              syncStateChanged:(BOOL)syncStateChanged
       excludesMetadataChanges:(BOOL)excludesMetadataChanges NS_DESIGNATED_INITIALIZER;
 
@@ -99,7 +49,7 @@ typedef void (^FSTViewSnapshotHandler)(FSTViewSnapshot *_Nullable snapshot,
 /** Returns a view snapshot as if all documents in the snapshot were added. */
 + (instancetype)snapshotForInitialDocuments:(FSTDocumentSet *)documents
                                       query:(FSTQuery *)query
-                                mutatedKeys:(DocumentKeySet)mutatedKeys
+                                mutatedKeys:(firebase::firestore::model::DocumentKeySet)mutatedKeys
                                   fromCache:(BOOL)fromCache
                     excludesMetadataChanges:(BOOL)excludesMetadataChanges;
 
@@ -113,7 +63,7 @@ typedef void (^FSTViewSnapshotHandler)(FSTViewSnapshot *_Nullable snapshot,
 @property(nonatomic, strong, readonly) FSTDocumentSet *oldDocuments;
 
 /** The set of changes that have been applied to the documents. */
-@property(nonatomic, strong, readonly) NSArray<FSTDocumentViewChange *> *documentChanges;
+- (const std::vector<firebase::firestore::core::DocumentViewChange> &)documentChanges;
 
 /** Whether any document in the snapshot was served from the local cache. */
 @property(nonatomic, assign, readonly, getter=isFromCache) BOOL fromCache;
@@ -128,7 +78,7 @@ typedef void (^FSTViewSnapshotHandler)(FSTViewSnapshot *_Nullable snapshot,
 @property(nonatomic, assign, readonly) BOOL excludesMetadataChanges;
 
 /** The document in this snapshot that have unconfirmed writes. */
-@property(nonatomic, assign, readonly) DocumentKeySet mutatedKeys;
+@property(nonatomic, assign, readonly) firebase::firestore::model::DocumentKeySet mutatedKeys;
 
 @end
 
