@@ -8,6 +8,9 @@ target 'registrationApp' do
   pod 'FirebaseUI'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  pod 'Firebase/Database'
+  pod 'Firebase/Functions'
+  pod 'Firebase/DynamicLinks'
 
   # Pods for registrationApp
 
